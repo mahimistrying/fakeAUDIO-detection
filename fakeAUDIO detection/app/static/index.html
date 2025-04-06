@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Audio Detection</title>
+</head>
+
+<body>
+    <h1>Fake Audio Detection</h1>
+
+    <form id="uploadForm">
+        <label for="audioFile">Upload an audio file:</label><br>
+        <input type="file" id="audioFile" name="audioFile" accept="audio/*"><br><br>
+        <button type="submit">Predict</button>
+    </form>
+
+    <h2>Prediction Result:</h2>
+    <p id="result"></p>
+
+    <script>
+        document.getElementById('uploadForm').addEventListener('submit', async function (event) {
+            event.preventDefault(); // Prevent the form from reloading the page
+
+            // Get the selected file
+            const fileInput = document.getElementById('audioFile');
+            const file = fileInput.files[0];
+
+            if (!file) {
+                alert("Please select an audio file.");
+                return;
+            }
+
+            // Create FormData object to send the file via POST request
+            const formData = new FormData();
+            formData.append('audio', file);
+
+            try {
+                // Send the file to the Flask API using fetch
+                const response = await fetch('http://127.0.0.1:5000/predict', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                // Parse the JSON response
+                const data = await response.json();
+
+                // Display the prediction result
+                document.getElementById('result').textContent = `Prediction: ${data.prediction}`;
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Failed to get prediction. Please try again.');
+            }
+        });
+    </script>
+</body>
+
+</html>
