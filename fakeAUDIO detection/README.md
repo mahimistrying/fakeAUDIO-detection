@@ -74,7 +74,7 @@ Navigate to the root directory and run the training script or notebook:
 python scripts/deepfake_audio_detection.py
 
 # Option 2: Open and run the notebook
-jupyter notebook notebooks/deepfake_audio_training.ipynb
+Jupyter notebook notebooks/deepfake_audio_training.ipynb
 ```
 
 This will save the trained model (e.g., `deepfakeAudioDetectionModel.keras`) inside the `model/` directory.
@@ -124,7 +124,7 @@ This project is licensed under the MIT License – see the LICENSE file for deta
 ## Author
 
 Mahim Uddin Ahmed  
-GitHub: https://github.com/YOUR_USERNAME  
+GitHub: https://github.com/mahimistrying
 Email: mahim.ahmed119@gmail.com
 
 ## Acknowledgements
