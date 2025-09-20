@@ -276,9 +276,6 @@ This is a capstone project, but contributions and improvements are welcome:
 4. Push to the branch (`git push origin feature/improvement`)
 5. Open a Pull Request
 
-## 📄 License
-
-This project is part of an academic capstone project. Please refer to your institution's guidelines regarding code sharing and usage.
 
 ## 🙏 Acknowledgments
 
@@ -288,13 +285,5 @@ This project is part of an academic capstone project. Please refer to your insti
 - **WebRTC** - Peer-to-peer communication standards
 - **Next.js Team** - React framework and development experience
 
-## 📞 Support
 
-For questions about this capstone project:
-- Check the [Issues](../../issues) section
-- Review the codebase documentation
-- Contact the project maintainers
-
----
-
-**Note**: This is a capstone project demonstrating audio deepfake detection capabilities. The ML model integration is currently simulated and should be replaced with actual model implementations for production use.
+.
